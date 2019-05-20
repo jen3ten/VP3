@@ -16,7 +16,6 @@ namespace Virtual_Pets_Amok
             Goldfish = goldfish;
         }
 
-
-   
+        
     }
 }
