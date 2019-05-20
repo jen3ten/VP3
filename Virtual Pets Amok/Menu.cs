@@ -6,16 +6,15 @@ namespace Virtual_Pets_Amok
 {
     class Menu
     {
-        public string Goldfish { get; set; }
-        public string Moose { get; set; }
-        public string Ferret { get; set; }
-        public string Penguin { get; set; }
 
-        public Menu(string goldfish)
+        public Menu()
         {
-            Goldfish = goldfish;
+           
         }
 
-        
+        public void MainMenu()
+        {
+            Console.WriteLine("This is the main menu");
+        }
     }
 }
