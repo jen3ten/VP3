@@ -18,8 +18,13 @@ namespace Virtual_Pets_Amok
             while (toPlay)
             {
                 Console.WriteLine("Let's Play!");
-                Console.WriteLine("Please choose which pet you would like to add: Goldfish, Moose, Ferret, or Penguin");
+                Console.WriteLine("Please choose which pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
+                string petSpecies = Console.ReadLine();
+                Console.WriteLine("Please give a name to your " + petSpecies);
+                string petName = Console.ReadLine();
+                Pet firstPet = new Pet(petName, petSpecies);
                 Console.ReadLine();
+
             }
 
 

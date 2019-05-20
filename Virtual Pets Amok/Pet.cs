@@ -8,19 +8,20 @@ namespace Virtual_Pets_Amok
     {
         public string Name { get; set; }
         public string Species { get; set; }
-        public string Health { get; set; }
-        public string Happiness { get; set; }
+      
 
-        public Pet(string name, string species, string health, string happiness)
+        public Pet(string name, string species)
         {
             Name = name;
             Species = species;
-            Health = health;
-            Happiness = happiness;
        
         }
         
-
+        public void GetInfo()
+        {
+            Console.WriteLine("Your " + Species + "is named " + Name);
+            
+        }
     }
 
 
