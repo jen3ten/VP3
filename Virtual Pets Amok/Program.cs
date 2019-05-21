@@ -37,20 +37,28 @@ namespace Virtual_Pets_Amok
                 if (menuResponse == 2)
                 {
                     Console.WriteLine("You just fed your pet!");
-                    firstPet.Hunger--;
+                    firstPet.Hunger = firstPet.Hunger-3;
+                    firstPet.Boredom++;
                 }
 
                 if (menuResponse == 3)
                 {
                     Console.WriteLine("You just played with your pet!");
-                    firstPet.Boredom--;
-                    firstPet.Hunger++;
+                    firstPet.Boredom = firstPet.Boredom-2;
+                    firstPet.Hunger = firstPet.Hunger+3;
+                    int injuryChance = new Random().Next(1, 101);
+                    if(injuryChance <= 100)
+                    {
+                        firstPet.Health = firstPet.Health - 5;
+                    }
+
                 }
                 if (menuResponse == 4)
                 {
                     Console.WriteLine("You want to take your pet in for a check up.");
                     firstPet.Health++;
                     firstPet.Boredom++;
+                    firstPet.Hunger++;
                 }
                 if (menuResponse == 5)
                 {
