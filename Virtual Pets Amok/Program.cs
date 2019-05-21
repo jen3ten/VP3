@@ -33,6 +33,16 @@ namespace Virtual_Pets_Amok
                     firstPet = new Pet(petName, petSpecies);
                  }
 
+                if (menuResponse == 2)
+                {
+
+                }
+
+                if (menuResponse == 7)
+                {
+                    return;
+                }
+
 
                 Console.WriteLine("Type \"MyPet\" in order to view the status of your pet");
                 string infoResponse = Console.ReadLine().ToLower();

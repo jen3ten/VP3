@@ -21,7 +21,7 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("4. Take My Pet to the veternarian");
             Console.WriteLine("5. Check My Pet Info");
             Console.WriteLine("6. Check My Pet Status");
-            Console.WriteLine("-please type \"quit\" to exit-");
+            Console.WriteLine("7. Quit");
             int menuResponse = Convert.ToInt32(Console.ReadLine());
             return menuResponse;
                                                         
