@@ -49,7 +49,8 @@ namespace Virtual_Pets_Amok
                     int injuryChance = new Random().Next(1, 101);
                     if(injuryChance <= 100)
                     {
-                        firstPet.Health = firstPet.Health - 5;
+                        firstPet.Health = firstPet.Health-5;
+                        Console.WriteLine("Oh No! Your pet got hurt while playing. You need to take them to the vet!/n");
                     }
 
                 }
