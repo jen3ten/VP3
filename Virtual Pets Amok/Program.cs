@@ -35,7 +35,29 @@ namespace Virtual_Pets_Amok
 
                 if (menuResponse == 2)
                 {
+                    Console.WriteLine("You want to feed your pet.");
+                }
 
+                if (menuResponse == 3)
+                {
+                    Console.WriteLine("You want to play with your pet.");
+                }
+                if (menuResponse == 4)
+                {
+                    Console.WriteLine("You want to take your pet in for a check up.");
+                }
+                if (menuResponse == 5)
+                {
+                    firstPet.GetInfo();
+                    Console.ReadLine();
+
+                }
+                if (menuResponse == 6)
+                {
+                            Console.WriteLine("Your pet's hunger is " + firstPet.Hunger);
+                            Console.WriteLine("Your pet's boredom level is " + firstPet.Boredom);
+                            Console.WriteLine("Your pet's health level is " + firstPet.Health);
+                            Console.ReadLine();
                 }
 
                 if (menuResponse == 7)
@@ -44,30 +66,7 @@ namespace Virtual_Pets_Amok
                 }
 
 
-                Console.WriteLine("Type \"MyPet\" in order to view the status of your pet");
-                string infoResponse = Console.ReadLine().ToLower();
-                {
-                    if (infoResponse.Equals("mypet"))
-                    {
-                        Console.WriteLine("Your " + firstPet.Species + " is named " + firstPet.Name);
-                        firstPet.GetInfo();
-                        Console.ReadLine();
-                    }
-
-                }
                 
-                Console.WriteLine("Type \"PetHealth\" in order to view the status of your pet");
-                string statusResponse = Console.ReadLine().ToLower();
-                {
-                    if (statusResponse.Equals("pethealth"))
-                    {
-                       
-                        Console.WriteLine("Your pet's hunger is " + firstPet.Hunger);
-
-                        Console.ReadLine();
-                    }
-
-                }
 
 
             }
