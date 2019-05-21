@@ -44,13 +44,13 @@ namespace Virtual_Pets_Amok
                 if (menuResponse == 3)
                 {
                     Console.WriteLine("You just played with your pet!");
-                    firstPet.Boredom = firstPet.Boredom-2;
-                    firstPet.Hunger = firstPet.Hunger+3;
+                    firstPet.Boredom -=2;
+                    firstPet.Hunger +=3;
                     int injuryChance = new Random().Next(1, 101);
                     if(injuryChance <= 100)
                     {
-                        firstPet.Health = firstPet.Health-5;
-                        Console.WriteLine("Oh No! Your pet got hurt while playing. You need to take them to the vet!/n");
+                        firstPet.Health -=5;
+                        Console.WriteLine("Oh No! Your pet got hurt while playing. You need to take them to the vet!\n");
                     }
 
                 }
@@ -59,12 +59,11 @@ namespace Virtual_Pets_Amok
                     Console.WriteLine("You want to take your pet in for a check up.");
                     firstPet.Health++;
                     firstPet.Boredom++;
-                    firstPet.Hunger++;
+                    firstPet.Hunger +=3;
                 }
                 if (menuResponse == 5)
                 {
                     firstPet.GetInfo();
-                    Console.ReadLine();
 
                 }
                 if (menuResponse == 6)
@@ -72,7 +71,7 @@ namespace Virtual_Pets_Amok
                             Console.WriteLine("Your pet's hunger is " + firstPet.Hunger);
                             Console.WriteLine("Your pet's boredom level is " + firstPet.Boredom);
                             Console.WriteLine("Your pet's health level is " + firstPet.Health);
-                            Console.ReadLine();
+                            Console.WriteLine("");
                 }
 
                 if (menuResponse == 7)
