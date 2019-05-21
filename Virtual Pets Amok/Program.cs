@@ -16,13 +16,14 @@ namespace Virtual_Pets_Amok
                 toPlay = false;
             }
 
+            Pet firstPet = new Pet("", "");
+
             while (toPlay)
             {
                 Console.WriteLine("\nLet's Play!");
 
                 Menu startMenu = new Menu();
                 int menuResponse = menu.MainMenu();
-                Pet firstPet = new Pet("", "");
                 
                 if (menuResponse == 1)
                  {
@@ -35,16 +36,21 @@ namespace Virtual_Pets_Amok
 
                 if (menuResponse == 2)
                 {
-                    Console.WriteLine("You want to feed your pet.");
+                    Console.WriteLine("You just fed your pet!");
+                    firstPet.Hunger--;
                 }
 
                 if (menuResponse == 3)
                 {
-                    Console.WriteLine("You want to play with your pet.");
+                    Console.WriteLine("You just played with your pet!");
+                    firstPet.Boredom--;
+                    firstPet.Hunger++;
                 }
                 if (menuResponse == 4)
                 {
                     Console.WriteLine("You want to take your pet in for a check up.");
+                    firstPet.Health++;
+                    firstPet.Boredom++;
                 }
                 if (menuResponse == 5)
                 {
