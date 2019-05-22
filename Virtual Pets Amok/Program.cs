@@ -27,54 +27,34 @@ namespace Virtual_Pets_Amok
                 
                 if (menuResponse == 1)
                  {
-                    Console.WriteLine("Please choose which pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
-                    string petSpecies = Console.ReadLine();
-                    Console.WriteLine("Please give a name to your " + petSpecies);
-                    string petName = Console.ReadLine();
-                    firstPet = new Pet(petName, petSpecies);
+                    firstPet.CreatePet();
                  }
 
-                if (menuResponse == 2)
+                else if (menuResponse == 2)
                 {
-                    Console.WriteLine("You just fed your pet!");
-                    firstPet.Hunger = firstPet.Hunger-3;
-                    firstPet.Boredom++;
+                    firstPet.FeedPet();
                 }
 
-                if (menuResponse == 3)
+                else if (menuResponse == 3)
                 {
-                    Console.WriteLine("You just played with your pet!");
-                    firstPet.Boredom = firstPet.Boredom-2;
-                    firstPet.Hunger = firstPet.Hunger+3;
-                    int injuryChance = new Random().Next(1, 101);
-                    if(injuryChance <= 100)
-                    {
-                        firstPet.Health = firstPet.Health - 5;
-                    }
-
+                    firstPet.PlayPet();
                 }
-                if (menuResponse == 4)
+                else if (menuResponse == 4)
                 {
-                    Console.WriteLine("You want to take your pet in for a check up.");
-                    firstPet.Health++;
-                    firstPet.Boredom++;
-                    firstPet.Hunger++;
+                    firstPet.VisitVet();
                 }
-                if (menuResponse == 5)
+                else if (menuResponse == 5)
                 {
                     firstPet.GetInfo();
-                    Console.ReadLine();
 
                 }
-                if (menuResponse == 6)
+                else if (menuResponse == 6)
                 {
-                            Console.WriteLine("Your pet's hunger is " + firstPet.Hunger);
-                            Console.WriteLine("Your pet's boredom level is " + firstPet.Boredom);
-                            Console.WriteLine("Your pet's health level is " + firstPet.Health);
-                            Console.ReadLine();
+                    firstPet.GetStatus();
+                          
                 }
 
-                if (menuResponse == 7)
+                else if (menuResponse == 7)
                 {
                     return;
                 }
