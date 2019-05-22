@@ -28,7 +28,9 @@ namespace Virtual_Pets_Amok
             string petSpecies = Console.ReadLine();
             Console.WriteLine("Please give a name to your " + petSpecies);
             string petName = Console.ReadLine();
-            Pet firstPet = new Pet(petName, petSpecies);
+            //Pet firstPet = new Pet(petName, petSpecies);
+            Name = petName;
+            Species = petSpecies;
         }
 
         public void FeedPet()
