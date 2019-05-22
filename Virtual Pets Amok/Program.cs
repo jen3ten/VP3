@@ -51,7 +51,6 @@ namespace Virtual_Pets_Amok
                 else if (menuResponse == 6)
                 {
                     firstPet.GetStatus();
-                          
                 }
 
                 else if (menuResponse == 7)
