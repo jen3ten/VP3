@@ -31,7 +31,10 @@ namespace Virtual_Pets_Amok
             //Pet firstPet = new Pet(petName, petSpecies);
             Name = petName;
             Species = petSpecies;
-        }
+            Shelter shelter = new Shelter();
+
+            shelter.AddPetList();
+                   }
 
         public void FeedPet()
         {
