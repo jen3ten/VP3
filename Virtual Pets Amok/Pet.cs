@@ -21,10 +21,6 @@ namespace Virtual_Pets_Amok
             Health = 10;
         }
 
-        internal void Add(string v)
-        {
-            throw new NotImplementedException();
-        }
 
         public void CreatePet()
         {
@@ -32,13 +28,10 @@ namespace Virtual_Pets_Amok
             string petSpecies = Console.ReadLine();
             Console.WriteLine("Please give a name to your " + petSpecies);
             string petName = Console.ReadLine();
-            //Pet firstPet = new Pet(petName, petSpecies);
+            Pet firstPet = new Pet(petName, petSpecies);
             Name = petName;
             Species = petSpecies;
-            
-            Shelter shelter = new Shelter("My Shelter");
 
-            shelter.AddPetList();
         }
 
         public void FeedPet()
@@ -71,7 +64,7 @@ namespace Virtual_Pets_Amok
         
         public void GetInfo()
         {
-            Console.WriteLine("Your " + Species + "is named " + Name);
+            Console.WriteLine("Your " + Species + " is named " + Name);
         }
 
         public void GetStatus()

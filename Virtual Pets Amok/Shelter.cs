@@ -13,20 +13,17 @@ namespace Virtual_Pets_Amok
             ShelterName = shelterName;
         }
 
-        Pet myPet = new Pet("", "");
         List<Pet> myPets = new List<Pet>();
 
-        public void AddPetList()
+        public void AddPetList(Pet firstPet)
         {
             Console.WriteLine("Added to list!");
-            myPets.Add($"{myPet.Name}" $"{myPet.Species}");
-
+            myPets.Add(firstPet);
         }
 
 
         public void PetList()
         {
-            List<Pet> myPets = new List<Pet>() { };
             
             foreach(Pet element in myPets)
             {
@@ -35,6 +32,6 @@ namespace Virtual_Pets_Amok
 
         }
             
-        }
     }
+}
 

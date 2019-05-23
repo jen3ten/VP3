@@ -10,7 +10,7 @@ namespace Virtual_Pets_Amok
         {
 
         }
-
+        Pet firstPet;
 
         public void FirstMenu()
         {
@@ -23,12 +23,13 @@ namespace Virtual_Pets_Amok
             {
                 toPlay = false;
             }
-            Pet firstPet = new Pet("", "");
-            Shelter myPet = new Shelter("Shelter");
+            Shelter shelter = new Shelter("Shelter");
 
 
             while (toPlay)
             {
+                firstPet = new Pet("", "");
+
                 Console.WriteLine("\nLet's Play!");
 
                 Menu startMenu = new Menu();
@@ -38,6 +39,7 @@ namespace Virtual_Pets_Amok
                 {
                     case 1:
                         firstPet.CreatePet();
+                        shelter.AddPetList(firstPet);
                         break;
                     case 2:
                         firstPet.FeedPet();
@@ -55,7 +57,7 @@ namespace Virtual_Pets_Amok
                         firstPet.GetStatus();
                         break;
                     case 7:
-                        myPet.PetList();
+                        shelter.PetList();
                         break;
                     case 8:
                         return;
