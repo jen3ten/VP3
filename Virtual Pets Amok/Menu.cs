@@ -34,39 +34,35 @@ namespace Virtual_Pets_Amok
                 Menu startMenu = new Menu();
                 int menuResponse = menu.MainMenu();
 
-                if (menuResponse == 1)
+                switch (menuResponse)
                 {
-                    firstPet.CreatePet();
+                    case 1:
+                        firstPet.CreatePet();
+                        break;
+                    case 2:
+                        firstPet.FeedPet();
+                        break;
+                    case 3:
+                        firstPet.PlayPet();
+                        break;
+                    case 4:
+                        firstPet.VisitVet();
+                        break;
+                    case 5:
+                        firstPet.GetInfo();
+                        break;
+                    case 6:
+                        firstPet.GetStatus();
+                        break;
+                    case 7:
+                        return;
+                    default:
+                        Console.WriteLine("Please select 1 through 7");
+                        break;
+                                                                  
+                                               
                 }
-
-                else if (menuResponse == 2)
-                {
-                    firstPet.FeedPet();
-                }
-
-                else if (menuResponse == 3)
-                {
-                    firstPet.PlayPet();
-                }
-                else if (menuResponse == 4)
-                {
-                    firstPet.VisitVet();
-                }
-                else if (menuResponse == 5)
-                {
-                    firstPet.GetInfo();
-
-                }
-                else if (menuResponse == 6)
-                {
-                    firstPet.GetStatus();
-                }
-
-                else if (menuResponse == 7)
-                {
-                    return;
-                }
-                
+             
             }
 
         }
