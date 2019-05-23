@@ -6,10 +6,8 @@ namespace Virtual_Pets_Amok
 {
     class Menu
     {
-
         public Menu()
         {
-
 
         }
 
@@ -26,6 +24,8 @@ namespace Virtual_Pets_Amok
                 toPlay = false;
             }
             Pet firstPet = new Pet("", "");
+            Shelter myPet = new Shelter("Shelter");
+
 
             while (toPlay)
             {
@@ -55,18 +55,18 @@ namespace Virtual_Pets_Amok
                         firstPet.GetStatus();
                         break;
                     case 7:
+                        myPet.PetList();
+                        break;
+                    case 8:
                         return;
                     default:
-                        Console.WriteLine("Please select 1 through 7");
+                        Console.WriteLine("Please select 1 through 8");
                         break;
-                                                                  
-                                               
                 }
              
             }
 
         }
-
 
 
         public int MainMenu()
@@ -78,13 +78,12 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("4. Take My Pet to the veternarian");
             Console.WriteLine("5. Check My Pet Info");
             Console.WriteLine("6. Check My Pet Status");
-            Console.WriteLine("7. Quit");
+            Console.WriteLine("7. View Shelter");
+            Console.WriteLine("8. Quit");
             int menuResponse = Convert.ToInt32(Console.ReadLine());
             return menuResponse;
-
         }
 
     }
-
 
 }
