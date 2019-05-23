@@ -50,6 +50,7 @@ namespace Virtual_Pets_Amok
             if (injuryChance <= 100)
             {
                 Health -= 5;
+                Console.WriteLine("Oh No! You're pet got hurt while playing. You better take them to the vet!");
             }
         }
 

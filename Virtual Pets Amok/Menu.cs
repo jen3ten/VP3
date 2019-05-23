@@ -83,6 +83,7 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("7. View Shelter");
             Console.WriteLine("8. Quit");
             int menuResponse = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
             return menuResponse;
         }
 

@@ -13,7 +13,7 @@ namespace Virtual_Pets_Amok
             ShelterName = shelterName;
         }
 
-        List<Pet> myPets = new List<Pet>();
+        public List<Pet> myPets = new List<Pet>();
 
         public void AddPetList(Pet firstPet)
         {
