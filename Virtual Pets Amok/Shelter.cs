@@ -23,12 +23,10 @@ namespace Virtual_Pets_Amok
 
         public void PetList()
         {
-
             foreach (Pet element in myPets)
             {
                 Console.WriteLine($"{element.Name} {element.Species}");
             }
-
         }
 
         public void PlayAll()
@@ -53,12 +51,7 @@ namespace Virtual_Pets_Amok
         {
             foreach (Pet element in myPets)
             {
-                
-                Console.WriteLine("You just fed your pet!");
-                element.Hunger = element.Hunger - 3;
-                element.Boredom++;
-
-
+                element.FeedPet();
             }
         }
 
