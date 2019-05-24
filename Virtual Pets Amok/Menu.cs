@@ -11,6 +11,7 @@ namespace Virtual_Pets_Amok
 
         }
         Pet firstPet;
+        Shelter shelter;
 
         public void FirstMenu()
         {
@@ -23,7 +24,7 @@ namespace Virtual_Pets_Amok
             {
                 toPlay = false;
             }
-            Shelter shelter = new Shelter("Shelter");
+            shelter = new Shelter("Shelter");
 
 
             while (toPlay)
@@ -42,7 +43,7 @@ namespace Virtual_Pets_Amok
                         shelter.AddPetList(firstPet);
                         break;
                     case 2:
-                        firstPet.Interact();
+                        menu.Interact();                        
                         break;
                     case 3:
                         shelter.GetInfo();
@@ -59,7 +60,7 @@ namespace Virtual_Pets_Amok
                         Console.WriteLine("Please select 1 through 6");
                         break;
                 }
-             
+
             }
 
         }
@@ -79,6 +80,33 @@ namespace Virtual_Pets_Amok
             return menuResponse;
         }
 
-    }
+        public void Interact()
+        {
+            Console.WriteLine("Choose which activity you would like to do:");
+            Console.WriteLine("1. Play with your Pets");
+            Console.WriteLine("2. Feed your Pets");
+            Console.WriteLine("3. Take your Pets to the Veterinarian");
+            Console.WriteLine("4.Return to Main Menu");
+            int interactionResponse = Convert.ToInt32(Console.ReadLine());
 
+
+            switch (interactionResponse)
+            {
+                case 1:
+                    shelter.PlayAll();
+                    break;
+                case 2:
+                    shelter.FeedAll();
+                    break;
+                case 3:
+                    shelter.VetAll();
+                    break;
+                default:
+                    Console.WriteLine("Please choose an interaction");
+                    break;
+
+
+            }
+        }
+    }
 }

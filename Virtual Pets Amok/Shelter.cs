@@ -53,7 +53,7 @@ namespace Virtual_Pets_Amok
         {
             foreach (Pet element in myPets)
             {
-                element.FeedPet();
+                
                 Console.WriteLine("You just fed your pet!");
                 element.Hunger = element.Hunger - 3;
                 element.Boredom++;

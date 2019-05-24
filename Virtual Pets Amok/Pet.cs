@@ -69,36 +69,10 @@ namespace Virtual_Pets_Amok
         }
 
 
-        public void Interact()
-        {
-            Console.WriteLine("Choose which activity you would like to do:");
-            Console.WriteLine("1. Play with your Pets");
-            Console.WriteLine("2. Feed your Pets");
-            Console.WriteLine("3. Take your Pets to the Veterinarian");
-            Console.WriteLine("4.Return to Main Menu");
-            int interactionResponse = Convert.ToInt32(Console.ReadLine());
-            
-
-            switch (interactionResponse)
-            {
-                case 1:
-                    shelter.PlayAll();
-                    break;
-                case 2:
-                    shelter.FeedAll();
-                    break;
-                case 3:
-                    shelter.VetAll();
-                    break;
-                default:
-                    Console.WriteLine("Please choose an interaction");
-                    break;
-
-                
-            }
+       
             
       
-        }
+        
         
     }
 }
