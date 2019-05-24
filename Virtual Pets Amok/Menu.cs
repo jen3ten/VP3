@@ -42,24 +42,18 @@ namespace Virtual_Pets_Amok
                         shelter.AddPetList(firstPet);
                         break;
                     case 2:
-                        firstPet.FeedPet();
+                        firstPet.Interact();
                         break;
                     case 3:
-                        firstPet.PlayPet();
-                        break;
-                    case 4:
-                        firstPet.VisitVet();
-                        break;
-                    case 5:
                         firstPet.GetInfo();
                         break;
-                    case 6:
+                    case 4:
                         firstPet.GetStatus();
                         break;
-                    case 7:
+                    case 5:
                         shelter.PetList();
                         break;
-                    case 8:
+                    case 6:
                         return;
                     default:
                         Console.WriteLine("Please select 1 through 8");
@@ -75,13 +69,11 @@ namespace Virtual_Pets_Amok
         {
             Console.WriteLine("Main Menu/nPlease choose one of the following options:");
             Console.WriteLine("1. Add a Pet!");
-            Console.WriteLine("2. Feed my Pet");
-            Console.WriteLine("3. Play with my Pet");
-            Console.WriteLine("4. Take My Pet to the veternarian");
-            Console.WriteLine("5. Check My Pet Info");
-            Console.WriteLine("6. Check My Pet Status");
-            Console.WriteLine("7. View Shelter");
-            Console.WriteLine("8. Quit");
+            Console.WriteLine("2. Interact with Pets");
+            Console.WriteLine("3. Check My Pets Info");
+            Console.WriteLine("4. Check My Pets Status");
+            Console.WriteLine("5. View Shelter");
+            Console.WriteLine("6. Quit");
             int menuResponse = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             return menuResponse;
