@@ -45,10 +45,10 @@ namespace Virtual_Pets_Amok
                         firstPet.Interact();
                         break;
                     case 3:
-                        firstPet.GetInfo();
+                        shelter.GetInfo();
                         break;
                     case 4:
-                        firstPet.GetStatus();
+                        shelter.GetStatus();
                         break;
                     case 5:
                         shelter.PetList();
@@ -56,7 +56,7 @@ namespace Virtual_Pets_Amok
                     case 6:
                         return;
                     default:
-                        Console.WriteLine("Please select 1 through 8");
+                        Console.WriteLine("Please select 1 through 6");
                         break;
                 }
              

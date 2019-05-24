@@ -20,7 +20,7 @@ namespace Virtual_Pets_Amok
             Boredom = 2;
             Health = 10;
         }
-
+        Shelter shelter = new Shelter("Shelter");
         Pet firstPet;
         public void CreatePet()
         {
@@ -68,42 +68,36 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("Your " + Species + " is named " + Name);
         }
 
-        public void GetStatus()
-        {
-            Console.WriteLine("Your pet's hunger is " + Hunger);
-            Console.WriteLine("Your pet's boredom level is " + Boredom);
-            Console.WriteLine("Your pet's health level is " + Health);
-        }
 
         public void Interact()
         {
             Console.WriteLine("Choose which activity you would like to do:");
-            Console.WriteLine("1. Feed your Pets");
-            Console.WriteLine("2. Play with your Pets");
+            Console.WriteLine("1. Play with your Pets");
+            Console.WriteLine("2. Feed your Pets");
             Console.WriteLine("3. Take your Pets to the Veterinarian");
             Console.WriteLine("4.Return to Main Menu");
             int interactionResponse = Convert.ToInt32(Console.ReadLine());
+            
 
             switch (interactionResponse)
             {
                 case 1:
-                    firstPet.FeedPet();
+                    shelter.PlayAll();
                     break;
                 case 2:
-                    firstPet.PlayPet();
+                    shelter.FeedAll();
                     break;
                 case 3:
-                    firstPet.VisitVet();
+                    shelter.VetAll();
                     break;
-                case 4:
-                    return;
                 default:
                     Console.WriteLine("Please choose an interaction");
                     break;
 
                 
             }
-        
+            
+      
         }
         
     }

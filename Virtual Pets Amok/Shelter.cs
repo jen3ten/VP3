@@ -21,17 +21,68 @@ namespace Virtual_Pets_Amok
             myPets.Add(firstPet);
         }
 
-
         public void PetList()
         {
-            
-            foreach(Pet element in myPets)
+
+            foreach (Pet element in myPets)
             {
                 Console.WriteLine($"{element.Name} {element.Species}");
             }
 
         }
-            
+
+        public void PlayAll()
+        {
+            foreach (Pet element in myPets)
+            {
+                element.PlayPet();
+            }
+        }
+
+        public void GetStatus()
+        {
+                Console.WriteLine("Name  |  Hunger  |  Boredom  |  Health  |");
+                Console.WriteLine(" -----|----------|-----------|----------|");
+            foreach (Pet element in myPets)
+            {
+                Console.WriteLine($"{element.Name}  |    {element.Hunger}     |    {element.Boredom}      |    {element.Health}    |");
+            }
+        }
+
+        public void FeedAll()
+        {
+            foreach (Pet element in myPets)
+            {
+                element.FeedPet();
+                Console.WriteLine("You just fed your pet!");
+                element.Hunger = element.Hunger - 3;
+                element.Boredom++;
+
+
+            }
+        }
+
+        public void VetAll()
+        {
+            foreach (Pet element in myPets)
+            {
+                element.VisitVet();
+
+            }
+        }
+
+        public void GetInfo()
+        {
+            Console.WriteLine("Name    |   Species     |");
+            Console.WriteLine("--------|---------------|");
+            foreach(Pet element in myPets)
+            {
+
+                Console.WriteLine($"{ element.Name}    |   { element.Species}    |");
+
+            }
+        }
+
     }
 }
 
