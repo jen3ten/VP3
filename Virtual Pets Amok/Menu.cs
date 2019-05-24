@@ -11,6 +11,7 @@ namespace Virtual_Pets_Amok
 
         }
         Pet firstPet;
+        Shelter shelter;
 
         public void FirstMenu()
         {
@@ -23,7 +24,7 @@ namespace Virtual_Pets_Amok
             {
                 toPlay = false;
             }
-            Shelter shelter = new Shelter("Shelter");
+            shelter = new Shelter("Shelter");
 
 
             while (toPlay)
@@ -42,30 +43,24 @@ namespace Virtual_Pets_Amok
                         shelter.AddPetList(firstPet);
                         break;
                     case 2:
-                        firstPet.FeedPet();
+                        menu.Interact();                        
                         break;
                     case 3:
-                        firstPet.PlayPet();
+                        shelter.GetInfo();
                         break;
                     case 4:
-                        firstPet.VisitVet();
+                        shelter.GetStatus();
                         break;
                     case 5:
-                        firstPet.GetInfo();
-                        break;
-                    case 6:
-                        firstPet.GetStatus();
-                        break;
-                    case 7:
                         shelter.PetList();
                         break;
-                    case 8:
+                    case 6:
                         return;
                     default:
-                        Console.WriteLine("Please select 1 through 8");
+                        Console.WriteLine("Please select 1 through 6");
                         break;
                 }
-             
+
             }
 
         }
@@ -75,18 +70,43 @@ namespace Virtual_Pets_Amok
         {
             Console.WriteLine("Main Menu/nPlease choose one of the following options:");
             Console.WriteLine("1. Add a Pet!");
-            Console.WriteLine("2. Feed my Pet");
-            Console.WriteLine("3. Play with my Pet");
-            Console.WriteLine("4. Take My Pet to the veternarian");
-            Console.WriteLine("5. Check My Pet Info");
-            Console.WriteLine("6. Check My Pet Status");
-            Console.WriteLine("7. View Shelter");
-            Console.WriteLine("8. Quit");
+            Console.WriteLine("2. Interact with Pets");
+            Console.WriteLine("3. Check My Pets Info");
+            Console.WriteLine("4. Check My Pets Status");
+            Console.WriteLine("5. View Shelter");
+            Console.WriteLine("6. Quit");
             int menuResponse = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             return menuResponse;
         }
 
-    }
+        public void Interact()
+        {
+            Console.WriteLine("Choose which activity you would like to do:");
+            Console.WriteLine("1. Play with your Pets");
+            Console.WriteLine("2. Feed your Pets");
+            Console.WriteLine("3. Take your Pets to the Veterinarian");
+            Console.WriteLine("4.Return to Main Menu");
+            int interactionResponse = Convert.ToInt32(Console.ReadLine());
 
+
+            switch (interactionResponse)
+            {
+                case 1:
+                    shelter.PlayAll();
+                    break;
+                case 2:
+                    shelter.FeedAll();
+                    break;
+                case 3:
+                    shelter.VetAll();
+                    break;
+                default:
+                    Console.WriteLine("Please choose an interaction");
+                    break;
+
+
+            }
+        }
+    }
 }

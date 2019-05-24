@@ -20,15 +20,15 @@ namespace Virtual_Pets_Amok
             Boredom = 2;
             Health = 10;
         }
-
-
+        Shelter shelter = new Shelter("Shelter");
+        Pet firstPet;
         public void CreatePet()
         {
             Console.WriteLine("Please choose which pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
             string petSpecies = Console.ReadLine();
             Console.WriteLine("Please give a name to your " + petSpecies);
             string petName = Console.ReadLine();
-            Pet firstPet = new Pet(petName, petSpecies);
+            firstPet = new Pet(petName, petSpecies);
             Name = petName;
             Species = petSpecies;
 
@@ -68,11 +68,11 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("Your " + Species + " is named " + Name);
         }
 
-        public void GetStatus()
-        {
-            Console.WriteLine("Your pet's hunger is " + Hunger);
-            Console.WriteLine("Your pet's boredom level is " + Boredom);
-            Console.WriteLine("Your pet's health level is " + Health);
-        }
+
+       
+            
+      
+        
+        
     }
 }
