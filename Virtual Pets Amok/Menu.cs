@@ -112,10 +112,12 @@ namespace Virtual_Pets_Amok
                             switch (interactionResponse)
                             {
                                 case 1:
+                                    
                                     shelter.PlayAll();
                                     break;
                                 case 2:
-                                    shelter.FeedAll();
+                                    shelter.SingleFeed();
+                                    //shelter.FeedAll();
                                     break;
                                 case 3:
                                     shelter.CareAll();

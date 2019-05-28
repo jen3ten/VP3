@@ -65,12 +65,28 @@ namespace Virtual_Pets_Amok
 
         public void GetInfo()
         {
-            Console.WriteLine("Name    |   Species     |");
-            Console.WriteLine("--------|---------------|");
+            Console.WriteLine("Name      |   Species     |");
+            Console.WriteLine("----------|---------------|");
             foreach(Pet element in myPets)
             {
-                Console.WriteLine($"{ element.Name}    |   { element.Species}    |");
+                Console.WriteLine($" {(1)} { element.Name}    |   { element.Species}    |");
             }
+        }
+
+        public void SingleFeed()
+        {
+            Console.WriteLine("Name      |   Species     |");
+            Console.WriteLine("----------|---------------|");
+            int i = 0;
+            foreach (Pet element in myPets)
+            {
+                Console.WriteLine($" {(1)} { element.Name}    |   { element.Species}    |");
+            }
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            int selectedPet = Convert.ToInt32(Console.ReadLine());
+            int index = selectedPet-1;
+            Console.WriteLine(myPets[index].Name);
         }
 
     }
