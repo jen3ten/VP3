@@ -34,6 +34,7 @@ namespace Virtual_Pets_Amok
             foreach (Pet element in myPets)
             {
                 element.PlayPet();
+                Console.WriteLine("You just played with all of your Pets!");
             }
         }
 
@@ -52,6 +53,7 @@ namespace Virtual_Pets_Amok
             foreach (Pet element in myPets)
             {
                 element.FeedPet();
+                Console.WriteLine("You just fed all the Pets in your shelter");
             }
         }
 
@@ -60,33 +62,30 @@ namespace Virtual_Pets_Amok
             foreach (Pet element in myPets)
             {
                 element.PetCare();
+                Console.WriteLine("You just took all your Pets to the veteranarian");
             }
         }
 
         public void GetInfo()
         {
-            Console.WriteLine("Name      |   Species     |");
-            Console.WriteLine("----------|---------------|");
+            Console.WriteLine("Name       |   Species     |");
+            Console.WriteLine("-----------|---------------|");
+            int i = 1;
             foreach(Pet element in myPets)
             {
-                Console.WriteLine($" {(1)} { element.Name}    |   { element.Species}    |");
+                Console.WriteLine($" {i++} { element.Name}    |   { element.Species}    |");
             }
         }
 
         public void SingleFeed()
         {
-            Console.WriteLine("Name      |   Species     |");
-            Console.WriteLine("----------|---------------|");
-            int i = 0;
-            foreach (Pet element in myPets)
-            {
-                Console.WriteLine($" {(1)} { element.Name}    |   { element.Species}    |");
-            }
+            GetInfo();
 
             Console.WriteLine("\nPlease select a pet from your shelter:");
-            int selectedPet = Convert.ToInt32(Console.ReadLine());
-            int index = selectedPet-1;
-            Console.WriteLine(myPets[index].Name);
+            Pet choicePet = myPets[Convert.ToInt32(Console.ReadLine())-1];
+
+            choicePet.FeedPet();
+            Console.WriteLine($"You just fed {choicePet.Name}!");
         }
 
     }

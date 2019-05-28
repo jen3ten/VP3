@@ -36,14 +36,12 @@ namespace Virtual_Pets_Amok
 
         public void FeedPet()
         {
-            Console.WriteLine("You just fed your pet!");
             Hunger = Hunger - 3;
             Boredom++;
         }
 
         public void PlayPet()
         {
-            Console.WriteLine("You just played with your pet!");
             Boredom -= 2;
             Hunger += 3;
             int injuryChance = new Random().Next(1, 101);
@@ -56,7 +54,6 @@ namespace Virtual_Pets_Amok
 
         public void PetCare()
         {
-            Console.WriteLine("You want to take your pet in for a check up.");
             Health++;
             Boredom++;
             Hunger++;
