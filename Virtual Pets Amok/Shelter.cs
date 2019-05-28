@@ -55,12 +55,11 @@ namespace Virtual_Pets_Amok
             }
         }
 
-        public void VetAll()
+        public void CareAll()
         {
             foreach (Pet element in myPets)
             {
-                element.VisitVet();
-
+                element.PetCare();
             }
         }
 
@@ -70,9 +69,7 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("--------|---------------|");
             foreach(Pet element in myPets)
             {
-
                 Console.WriteLine($"{ element.Name}    |   { element.Species}    |");
-
             }
         }
 

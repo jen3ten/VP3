@@ -54,7 +54,7 @@ namespace Virtual_Pets_Amok
             }
         }
 
-        public void VisitVet()
+        public void PetCare()
         {
             Console.WriteLine("You want to take your pet in for a check up.");
             Health++;
