@@ -12,6 +12,8 @@ namespace Virtual_Pets_Amok
         }
         Pet firstPet;
         Shelter shelter;
+        RoboPet firstRoboPet;
+        RoboticShelter roboShelter;
 
         public void FirstMenu()
         {
@@ -98,8 +100,8 @@ namespace Virtual_Pets_Amok
                     switch (menuResponse)
                     {
                         case 1:
-                            firstPet.CreatePet();
-                            shelter.AddPetList(firstPet);
+                            firstRoboPet.CreatePet();
+                            roboShelter.AddPetList(firstRoboPet);
                             break;
                         case 2:
                             Console.WriteLine("Choose which activity you would like to do:");

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Virtual_Pets_Amok
 {
-    class Shelter
+    public class Shelter
     {
         public string ShelterName { get; set; }
 
@@ -44,7 +44,7 @@ namespace Virtual_Pets_Amok
                 Console.WriteLine(" -----|----------|-----------|----------|");
             foreach (Pet element in myPets)
             {
-                Console.WriteLine($"{element.Name}  |    {element.Hunger}     |    {element.Boredom}      |    {element.Health}    |");
+                Console.WriteLine($"{element.Name}  |    {element.Energy}     |    {element.Boredom}      |    {element.Health}    |");
             }
         }
 

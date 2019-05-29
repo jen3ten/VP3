@@ -8,7 +8,7 @@ namespace Virtual_Pets_Amok
     {
         public string Name { get; set; }
         public string Species { get; set; }
-        public int Hunger { get; set; }
+        public int Energy { get; set; }
         public int Boredom { get; set; }
         public int Health { get; set; }
 
@@ -16,7 +16,7 @@ namespace Virtual_Pets_Amok
         {
             Name = name;
             Species = species;
-            Hunger = 0;
+            Energy = 9;
             Boredom = 2;
             Health = 10;
         }
@@ -36,14 +36,14 @@ namespace Virtual_Pets_Amok
 
         public virtual void FeedPet()
         {
-            Hunger = Hunger - 3;
+            Energy = Energy - 1;
             Boredom++;
         }
 
-        public void PlayPet()
+        public virtual void PlayPet()
         {
             Boredom -= 2;
-            Hunger += 3;
+            Energy += 3;
             int injuryChance = new Random().Next(1, 101);
             if (injuryChance <= 100)
             {
@@ -52,15 +52,15 @@ namespace Virtual_Pets_Amok
             }
         }
 
-        public void PetCare()
+        public virtual void PetCare()
         {
             Health++;
             Boredom++;
-            Hunger++;
+            Energy++;
         }
 
         
-        public void GetInfo()
+        public virtual void GetInfo()
         {
             Console.WriteLine("Your " + Species + " is named " + Name);
         }
