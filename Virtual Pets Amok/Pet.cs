@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Virtual_Pets_Amok
 {
-    class Pet
+    public class Pet
     {
         public string Name { get; set; }
         public string Species { get; set; }
@@ -34,7 +34,7 @@ namespace Virtual_Pets_Amok
 
         }
 
-        public void FeedPet()
+        public virtual void FeedPet()
         {
             Hunger = Hunger - 3;
             Boredom++;
