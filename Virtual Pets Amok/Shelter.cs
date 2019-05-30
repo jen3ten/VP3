@@ -19,15 +19,18 @@ namespace Virtual_Pets_Amok
 
         public void AddPetList(Pet firstPet)
         {
-            Console.WriteLine("Added to list!");
+            Console.WriteLine("\nAdded to list!");
             myPets.Add(firstPet);
         }
 
         public void PetList()
         {
+            int i = 1;
             foreach (Pet element in myPets)
             {
-                Console.WriteLine($"{element.Name} {element.Species}");
+                Console.WriteLine("Name        |  Species            |");
+                Console.WriteLine("------------|---------------------|");
+                Console.WriteLine($"{i++}. {element.Name} {element.Species}");
             }
         }
 
@@ -42,11 +45,12 @@ namespace Virtual_Pets_Amok
 
         public void GetStatus()
         {
-                Console.WriteLine("Name  |  Hunger  |  Boredom  |  Health  |");
-                Console.WriteLine(" -----|----------|-----------|----------|");
+            Console.WriteLine("Name  |  Hunger  |  Boredom  |  Health  |");
+            Console.WriteLine(" -----|----------|-----------|----------|");
+            int i = 1;
             foreach (Pet element in myPets)
             {
-                Console.WriteLine($"{element.Name}  |    {element.Energy}     |    {element.Boredom}      |    {element.Health}    |");
+                Console.WriteLine($"{i++}. {element.Name}  |    {element.Energy}     |    {element.Boredom}      |    {element.Health}    |");
             }
         }
 
@@ -75,7 +79,7 @@ namespace Virtual_Pets_Amok
             int i = 1;
             foreach(Pet element in myPets)
             {
-                Console.WriteLine($" {i++} { element.Name}    |   { element.Species}    |");
+                Console.WriteLine($" {i++}. { element.Name}    |   { element.Species}    |");
             }
         }
 
