@@ -23,6 +23,17 @@ namespace Virtual_Pets_Amok
             myPets.Add(firstPet);
         }
 
+        public virtual void RemovePetList(Pet firstPet)
+        {
+            GetInfo();
+            Console.WriteLine("Please select a pet to remove from the shelter.");
+            Pet choicePet = myPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.WriteLine($"\n{choicePet.Name} was removed from the shelter!");
+            
+            myPets.Remove(choicePet);
+        }
+
         public void PetList()
         {
             int i = 1;

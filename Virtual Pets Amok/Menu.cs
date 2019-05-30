@@ -130,6 +130,7 @@ namespace Virtual_Pets_Amok
                             shelter.PetList();
                             break;
                         case 6:
+                            shelter.RemovePetList(organicPet);
                             break;
                         default:
                             Console.WriteLine("Please select 1 through 7");
@@ -222,6 +223,7 @@ namespace Virtual_Pets_Amok
                                     roboShelter.PetList();
                                     break;
                             case 6:
+                                    roboShelter.RemoveRoboPet(roboPet);
                                     break;
                             case 7:
                                     break; //need a false statement to quit entire game.
@@ -249,7 +251,7 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("3. Check My Pets Info");
             Console.WriteLine("4. Check My Pets Status");
             Console.WriteLine("5. View Shelter");
-            Console.WriteLine("6. Change Shelters");
+            Console.WriteLine("6. Remove a Pet from Shelter");
             Console.WriteLine("7. Quit");
             int menuResponse = Convert.ToInt32(Console.ReadLine());
             Console.Clear();

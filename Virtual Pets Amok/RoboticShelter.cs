@@ -22,6 +22,17 @@ namespace Virtual_Pets_Amok
             myRoboPets.Add(roboPet);
         }
 
+        public void RemoveRoboPet(RoboPet roboPet)
+        {
+            GetInfo();
+            Console.WriteLine("Please select a pet to remove from the shelter.");
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.WriteLine($"\n{choicePet.Name} was removed from the shelter!");
+
+            myPets.Remove(roboPet);
+        }
+
         public void PetList()
         {
             foreach (Pet element in myRoboPets)
