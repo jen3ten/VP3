@@ -126,6 +126,15 @@ namespace Virtual_Pets_Amok
             choicePet.PetCare();
             Console.WriteLine($"You just took {choicePet.Name} to the vet!");
         }
+
+        public void TimeToll()
+        {
+            foreach (Pet element in myPets)
+            {
+                element.MenuTime();
+
+            }
+        }
     }
 }
 

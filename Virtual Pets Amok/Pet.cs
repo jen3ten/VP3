@@ -16,12 +16,13 @@ namespace Virtual_Pets_Amok
         {
             Name = name;
             Species = species;
-            Energy = 5;
-            Boredom = 3;
-            Health = 9;
+            Energy = 45;
+            Boredom = 30;
+            Health = 85;
         }
 
         Shelter shelter = new Shelter("Shelter");
+        RoboticShelter roboShelter = new RoboticShelter("RoboShelter");
 
         protected string petSpecies;
         protected string petName;
@@ -36,34 +37,45 @@ namespace Virtual_Pets_Amok
 
         public virtual void FeedPet()
         {
-            Energy -= 3;
-            Boredom++;
+            Energy -= 11;
+            Boredom += 7;
+            Health += 4; 
         }
 
         public virtual void PlayPet()
         {
-            Boredom -= 2;
-            Energy += 3;
+            Boredom -= 10;
+            Energy += 7;
             int injuryChance = new Random().Next(1, 101);
             if (injuryChance <= 10)
             {
-                Health -= 4;
+                Health -= 25;
                 Console.WriteLine("Oh No! You're pet got hurt while playing. You better take them to get cared for!");
             }
         }
 
         public virtual void PetCare()
         {
-            Health++;
-            Boredom++;
-            Energy++;
+            Health += 20;
+            Boredom += 12;
+            Energy += 10;
         }
 
-        
+        public void MenuTime()
+        {
+            Health--;
+            Boredom -= 2;
+            Energy += 2;
+        }
+
+
+
+
         public virtual void GetInfo()
         {
             Console.WriteLine("Your " + Species + " is named " + Name);
         }
 
+        
     }
 }

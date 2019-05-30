@@ -122,6 +122,15 @@ namespace Virtual_Pets_Amok
             Console.WriteLine($"You just brought {choicePet.Name} in for maintenance!");
         }
 
+        public void TimeTollToo()
+        {
+            foreach (RoboPet element in myRoboPets)
+            {
+                element.MenuTime();
+            }
+
+            
+        }
     }
 }
 

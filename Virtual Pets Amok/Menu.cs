@@ -38,7 +38,8 @@ namespace Virtual_Pets_Amok
 
                 Console.WriteLine("Please choose which Shelter you would like to visit: \n1. Organic \n2. Robotic");
                 int shelterType = Convert.ToInt32(Console.ReadLine());
-
+                shelter.TimeToll();
+                roboShelter.TimeTollToo();
 
                 if (shelterType.Equals(1))
                 {
