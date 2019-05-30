@@ -4,26 +4,27 @@ using System.Text;
 
 namespace Virtual_Pets_Amok
 {
-    public class Shelter
+    class RoboticShelter : Shelter
     {
-        public string ShelterName { get; set; }
+        public int RoboticShelterName { get; set; }
 
-        public Shelter(string shelterName)
+        public RoboticShelter(string RoboticShelterName) : base("")
+
         {
-            ShelterName = shelterName;
+            //RoboticShelterName = roboticShelterName;
         }
 
-        public List<Pet> myPets = new List<Pet>();
-
-        public void AddPetList(Pet firstPet)
+        public List<RoboPet> myRoboPets = new List<RoboPet>();
+        
+        public void AddRoboPetList(RoboPet firstRoboPet)
         {
             Console.WriteLine("Added to list!");
-            myPets.Add(firstPet);
+            myRoboPets.Add(firstRoboPet);
         }
 
         public void PetList()
         {
-            foreach (Pet element in myPets)
+            foreach (Pet element in myRoboPets)
             {
                 Console.WriteLine($"{element.Name} {element.Species}");
             }
@@ -31,7 +32,7 @@ namespace Virtual_Pets_Amok
 
         public void PlayAll()
         {
-            foreach (Pet element in myPets)
+            foreach (Pet element in myRoboPets)
             {
                 element.PlayPet();
                 Console.WriteLine("You just played with all of your Pets!");
@@ -40,9 +41,9 @@ namespace Virtual_Pets_Amok
 
         public void GetStatus()
         {
-                Console.WriteLine("Name  |  Hunger  |  Boredom  |  Health  |");
-                Console.WriteLine(" -----|----------|-----------|----------|");
-            foreach (Pet element in myPets)
+            Console.WriteLine("Name  |  Hunger  |  Boredom  |  Health  |");
+            Console.WriteLine(" -----|----------|-----------|----------|");
+            foreach (Pet element in myRoboPets)
             {
                 Console.WriteLine($"{element.Name}  |    {element.Energy}     |    {element.Boredom}      |    {element.Health}    |");
             }
@@ -50,7 +51,7 @@ namespace Virtual_Pets_Amok
 
         public void FeedAll()
         {
-            foreach (Pet element in myPets)
+            foreach (Pet element in myRoboPets)
             {
                 element.FeedPet();
                 Console.WriteLine("You just fed all the Pets in your shelter");
@@ -59,7 +60,7 @@ namespace Virtual_Pets_Amok
 
         public void CareAll()
         {
-            foreach (Pet element in myPets)
+            foreach (Pet element in myRoboPets)
             {
                 element.PetCare();
                 Console.WriteLine("You just took all your Pets to the veteranarian");
@@ -71,7 +72,7 @@ namespace Virtual_Pets_Amok
             Console.WriteLine("Name       |   Species     |");
             Console.WriteLine("-----------|---------------|");
             int i = 1;
-            foreach(Pet element in myPets)
+            foreach (Pet element in myRoboPets)
             {
                 Console.WriteLine($" {i++} { element.Name}    |   { element.Species}    |");
             }
@@ -82,7 +83,7 @@ namespace Virtual_Pets_Amok
             GetInfo();
 
             Console.WriteLine("\nPlease select a pet from your shelter:");
-            Pet choicePet = myPets[Convert.ToInt32(Console.ReadLine())-1];
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
 
             choicePet.FeedPet();
             Console.WriteLine($"You just fed {choicePet.Name}!");
