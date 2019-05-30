@@ -14,7 +14,7 @@ namespace VirtualPetsAmok.Tests
         {
             OrganicPet sut = new OrganicPet("", "");
 
-            Assert.Equal(9, sut.Energy);
+            Assert.Equal(5, sut.Energy);
         }
 
         /*[Fact]

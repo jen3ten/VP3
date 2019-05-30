@@ -20,7 +20,9 @@ namespace Virtual_Pets_Amok
             Boredom = 3;
             Health = 9;
         }
+
         Shelter shelter = new Shelter("Shelter");
+
         protected string petSpecies;
         protected string petName;
 
