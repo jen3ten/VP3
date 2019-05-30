@@ -13,9 +13,8 @@ namespace VirtualPetsAmok.Tests
             //sut.Oil = 7;
             
             sut.FeedPet();
-            int finalHunger = sut.Energy;
 
-            Assert.Equal(4, finalHunger);
+            Assert.Equal(2, sut.Energy);
         }
 
         [Fact]
@@ -24,9 +23,7 @@ namespace VirtualPetsAmok.Tests
             RoboPet sut = new RoboPet("", "");
             //sut.Oil = 7;
 
-            int finalHunger = sut.Energy;
-
-            Assert.Equal(9, finalHunger);
+            Assert.Equal(5, sut.Energy);
         }
     }
 }
