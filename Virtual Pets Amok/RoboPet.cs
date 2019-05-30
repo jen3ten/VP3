@@ -17,8 +17,8 @@ namespace Virtual_Pets_Amok
         {
             Console.WriteLine("Please choose which Robotic Pet you would like to add to your shelter: Dog, Dinosaur, Racoon, or Hedgehog");
             base.CreatePet();
-                this.Name = petName;
-                this.Species = petSpecies;
+            this.Name = petName;
+            this.Species = petSpecies;
         }
 
         public override void FeedPet()
