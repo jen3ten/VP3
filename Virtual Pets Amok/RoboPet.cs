@@ -9,31 +9,22 @@ namespace Virtual_Pets_Amok
 
         RoboPet roboPet;
 
-        public string Name { get; set; }
-        public string Species { get; set; }
-        public RoboPet(string name, string species) : base("", "")
+        public RoboPet(string name, string species) : base(name, species)
         {
         }
 
-        public void CreateRoboPet()
+        public override void CreatePet()
         {
-           
-                Console.WriteLine("Please choose which pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
-                string roboSpecies = Console.ReadLine();
-                Console.WriteLine("Please give a name to your " + roboSpecies);
-                string roboName = Console.ReadLine();
-                roboPet = new RoboPet(roboName, roboSpecies);
-                Name = roboName;
-                Species = roboSpecies;
-
-            }
+                base.CreatePet();
+                this.Name = petName;
+                this.Species = petSpecies;
+        }
 
         public override void FeedPet()
         {
             base.FeedPet();
             Energy -= 1; 
             Console.WriteLine($"You just oiled your Robopet!");
-
         }
     }
 }

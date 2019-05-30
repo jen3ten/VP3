@@ -19,7 +19,7 @@ namespace VirtualPetsAmok.Tests
         }
 
         [Fact]
-        public void New_Robo_Pet_Enery_Level()
+        public void New_Robo_Pet_Energy_Level()
         {
             RoboPet sut = new RoboPet("", "");
             //sut.Oil = 7;

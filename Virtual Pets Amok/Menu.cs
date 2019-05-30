@@ -11,8 +11,9 @@ namespace Virtual_Pets_Amok
 
         }
         Pet firstPet;
+        OrganicPet organicPet = new OrganicPet("","");
         Shelter shelter;
-        RoboPet firstRoboPet;
+        RoboPet roboPet;
         RoboticShelter roboShelter;
 
         public void FirstMenu()
@@ -31,12 +32,14 @@ namespace Virtual_Pets_Amok
         
             while (toPlay)
             {
-                firstPet = new Pet("", "");
+                
 
                 Console.WriteLine("\nLet's Play!");
 
                 Console.WriteLine("Please choose which Shelter you would like to visit: \n1. Organic \n2. Robotic");
                 int shelterType = Convert.ToInt32(Console.ReadLine());
+
+
                 if (shelterType.Equals(1))
                 {
                     Menu startMenu = new Menu();
@@ -45,8 +48,8 @@ namespace Virtual_Pets_Amok
                     switch (menuResponse)
                     {
                         case 1:
-                            firstPet.CreatePet();
-                            shelter.AddPetList(firstPet);
+                            organicPet.CreatePet();
+                            shelter.AddPetList(organicPet);
                             break;
                         case 2:
                             Console.WriteLine("Choose which activity you would like to do:");
@@ -100,8 +103,8 @@ namespace Virtual_Pets_Amok
                     switch (menuResponse)
                     {
                         case 1:
-                            firstRoboPet.CreatePet();
-                            roboShelter.AddPetList(firstRoboPet);
+                            roboPet.CreatePet();
+                            roboShelter.AddPetList(roboPet);
                             break;
                         case 2:
                             Console.WriteLine("Choose which activity you would like to do:");

@@ -21,16 +21,15 @@ namespace Virtual_Pets_Amok
             Health = 10;
         }
         Shelter shelter = new Shelter("Shelter");
-        Pet firstPet;
-        public void CreatePet()
+        protected string petSpecies;
+        protected string petName;
+
+        public virtual void CreatePet()
         {
             Console.WriteLine("Please choose which pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
-            string petSpecies = Console.ReadLine();
+            petSpecies = Console.ReadLine();
             Console.WriteLine("Please give a name to your " + petSpecies);
-            string petName = Console.ReadLine();
-            firstPet = new Pet(petName, petSpecies);
-            Name = petName;
-            Species = petSpecies;
+            petName = Console.ReadLine();
 
         }
 
