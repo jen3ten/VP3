@@ -16,10 +16,10 @@ namespace Virtual_Pets_Amok
 
         public List<RoboPet> myRoboPets = new List<RoboPet>();
         
-        public void AddRoboPetList(RoboPet firstRoboPet)
+        public void AddRoboPetList(RoboPet roboPet)
         {
             Console.WriteLine("Added to list!");
-            myRoboPets.Add(firstRoboPet);
+            myRoboPets.Add(roboPet);
         }
 
         public void PetList()
