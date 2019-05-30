@@ -23,7 +23,6 @@ namespace Virtual_Pets_Amok
         public override void FeedPet()
         {
             base.FeedPet();
-            Energy -= 1; 
             Console.WriteLine($"You just oiled your Robopet!");
         }
     }

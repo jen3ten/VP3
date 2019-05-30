@@ -1,10 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Virtual_Pets_Amok;
+using Xunit;
 
 namespace VirtualPetsAmok.Tests
 {
-    class PetTests
+    public class PetTests
     {
+        [Fact]
+        public void Pet_Gets_Hurt_When_Playing_100()
+        {
+            Pet sut = new Pet("", "");
+            sut.PlayPet();
+
+            Assert.Equal(8, sut.Energy);
+        }
+
     }
 }

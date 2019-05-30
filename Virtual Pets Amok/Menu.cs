@@ -11,7 +11,7 @@ namespace Virtual_Pets_Amok
 
         }
         Pet firstPet;
-        OrganicPet organicPet = new OrganicPet("","");
+        OrganicPet organicPet;
         Shelter shelter;
         RoboPet roboPet;
         RoboticShelter roboShelter;
@@ -42,6 +42,7 @@ namespace Virtual_Pets_Amok
 
                 if (shelterType.Equals(1))
                 {
+                    organicPet = new OrganicPet("", "");
                     Menu startMenu = new Menu();
                     int menuResponse = menu.MainMenu();
 
@@ -62,13 +63,55 @@ namespace Virtual_Pets_Amok
                             switch (interactionResponse)
                             {
                                 case 1:
-                                    shelter.PlayAll();
+                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
+                                    int playOption = Convert.ToInt32(Console.ReadLine());
+
+                                    switch (playOption)
+                                    {
+                                        case 1:
+                                            shelter.PetList();
+                                            break;
+                                        case 2:
+                                            shelter.PlayAll();
+                                            break;
+                                        default:
+                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter.");
+                                            break;
+                                    }
                                     break;
                                 case 2:
-                                    shelter.FeedAll();
+                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
+                                    int feedOption = Convert.ToInt32(Console.ReadLine());
+
+                                    switch (feedOption)
+                                    {
+                                        case 1:
+                                            shelter.PetList();
+                                            break;
+                                        case 2:
+                                            shelter.FeedAll();
+                                            break;
+                                        default:
+                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to feed all the pets in your shelter.");
+                                            break;
+                                    }
                                     break;
                                 case 3:
-                                    shelter.CareAll();
+                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
+                                    int careOption = Convert.ToInt32(Console.ReadLine());
+
+                                    switch (careOption)
+                                    {
+                                        case 1:
+                                            shelter.PetList();
+                                            break;
+                                        case 2:
+                                            shelter.CareAll();
+                                            break;
+                                        default:
+                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
+                                            break;
+                                    }
                                     break;
                                 case 4:
                                     return;
