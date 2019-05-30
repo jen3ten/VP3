@@ -32,9 +32,6 @@ namespace Virtual_Pets_Amok
         
             while (toPlay)
             {
-                
-
-                Console.WriteLine("\nLet's Play!");
 
                 Console.WriteLine("Please choose which Shelter you would like to visit: \n1. Organic \n2. Robotic");
                 int shelterType = Convert.ToInt32(Console.ReadLine());
@@ -64,7 +61,7 @@ namespace Virtual_Pets_Amok
                             switch (interactionResponse)
                             {
                                 case 1:
-                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
+                                    Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
                                     int playOption = Convert.ToInt32(Console.ReadLine());
 
                                     switch (playOption)
@@ -76,12 +73,12 @@ namespace Virtual_Pets_Amok
                                             shelter.PlayAll();
                                             break;
                                         default:
-                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter.");
+                                            Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to play all the pets in your shelter.");
                                             break;
                                     }
                                     break;
                                 case 2:
-                                    Console.WriteLine("Please type \"1\" to feed one pet or \n\"2\" to feed all the pets in your shelter");
+                                    Console.WriteLine("Please type: \n\"1\" to feed one pet or \n\"2\" to feed all the pets in your shelter");
                                     int feedOption = Convert.ToInt32(Console.ReadLine());
 
                                     switch (feedOption)
@@ -93,12 +90,12 @@ namespace Virtual_Pets_Amok
                                             shelter.FeedAll();
                                             break;
                                         default:
-                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to feed all the pets in your shelter.");
+                                            Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to feed all the pets in your shelter.");
                                             break;
                                     }
                                     break;
                                 case 3:
-                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
+                                    Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
                                     int careOption = Convert.ToInt32(Console.ReadLine());
 
                                     switch (careOption)
@@ -110,7 +107,7 @@ namespace Virtual_Pets_Amok
                                             shelter.CareAll();
                                             break;
                                         default:
-                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
+                                            Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
                                             break;
                                     }
                                     break;
@@ -129,12 +126,19 @@ namespace Virtual_Pets_Amok
                             break;
                         case 5:
                             shelter.PetList();
+                            roboShelter.PetList();
                             break;
                         case 6:
                             shelter.RemovePetList(organicPet);
                             break;
+                        case 7:
+                            if (menuResponse == 7)
+                            {
+                                toPlay = false;
+                            }
+                            break;
                         default:
-                            Console.WriteLine("Please select 1 through 7");
+                            Console.WriteLine("Not a valid entry.");
                             break;
                     }
                 }
@@ -158,12 +162,11 @@ namespace Virtual_Pets_Amok
                             Console.WriteLine("3. Take your Pets to the Veterinarian");
                             Console.WriteLine("4.Return to Main Menu");
                             int interactionResponse = Convert.ToInt32(Console.ReadLine());
-                            
 
                             switch (interactionResponse)
                             {
                                 case 1:
-                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
+                                    Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
                                     int playOption = Convert.ToInt32(Console.ReadLine());
 
                                     switch (playOption)
@@ -175,12 +178,12 @@ namespace Virtual_Pets_Amok
                                             roboShelter.PlayAll();
                                             break;
                                         default:
-                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter.");
+                                            Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to play all the pets in your shelter.");
                                             break;
                                     }
                                     break;
                                 case 2:
-                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
+                                    Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to play all the pets in your shelter");
                                     int feedOption = Convert.ToInt32(Console.ReadLine());
 
                                     switch (feedOption)
@@ -192,12 +195,12 @@ namespace Virtual_Pets_Amok
                                             roboShelter.FeedAll();
                                             break;
                                         default:
-                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to feed all the pets in your shelter.");
+                                            Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to feed all the pets in your shelter.");
                                             break;
                                     }
                                     break;
                                 case 3:
-                                    Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
+                                    Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
                                     int careOption = Convert.ToInt32(Console.ReadLine());
 
                                     switch (careOption)
@@ -209,7 +212,7 @@ namespace Virtual_Pets_Amok
                                             roboShelter.CareAll();
                                             break;
                                         default:
-                                            Console.WriteLine("Please type \"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
+                                            Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
                                             break;
                                     }
                                     break;
@@ -221,23 +224,27 @@ namespace Virtual_Pets_Amok
                                     roboShelter.GetStatus();
                                     break;
                             case 5:
+                                    shelter.PetList();
                                     roboShelter.PetList();
                                     break;
                             case 6:
                                     roboShelter.RemoveRoboPet(roboPet);
                                     break;
                             case 7:
-                                    break; //need a false statement to quit entire game.
-                                default:
-                                    Console.WriteLine("Please select 1 through 7");
+                                if (menuResponse == 7)
+                                {
+                                    toPlay = false;
+                                }
+                                break;
+                            default:
+                                    Console.WriteLine("Not a valid entry.");
                                     break;
-                            }
                     }
-
+                }
                 
                 else
                 {
-                    Console.WriteLine("Please enter a value \"1\" for Organic Pets or \"2\" for Robotic Pets");
+                    Console.WriteLine("Please enter the value \"1\" for Organic Pets or \"2\" for Robotic Pets");
                 }
             }
 

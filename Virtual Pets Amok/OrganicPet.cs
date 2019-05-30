@@ -15,6 +15,7 @@ namespace Virtual_Pets_Amok
 
         public override void CreatePet()
         {
+            Console.WriteLine("Please choose which Pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
             base.CreatePet();
             this.Name = petName;
             this.Species = petSpecies;

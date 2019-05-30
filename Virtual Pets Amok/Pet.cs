@@ -29,7 +29,6 @@ namespace Virtual_Pets_Amok
 
         public virtual void CreatePet()
         {
-            Console.WriteLine("Please choose which pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
             petSpecies = Console.ReadLine();
             Console.WriteLine("Please give a name to your " + petSpecies);
             petName = Console.ReadLine();
@@ -68,14 +67,10 @@ namespace Virtual_Pets_Amok
             Energy += 2;
         }
 
-
-
-
         public virtual void GetInfo()
         {
             Console.WriteLine("Your " + Species + " is named " + Name);
         }
-
         
     }
 }

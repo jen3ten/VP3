@@ -39,9 +39,10 @@ namespace Virtual_Pets_Amok
             int i = 1;
             foreach (Pet element in myPets)
             {
-                Console.WriteLine("Name        |  Species            |");
+                Console.WriteLine("Organic Shelter");
+                Console.WriteLine("\nName        |  Species            |");
                 Console.WriteLine("------------|---------------------|");
-                Console.WriteLine($"{i++}. {element.Name} {element.Species}");
+                Console.WriteLine($"{i++}. {element.Name}     |    {element.Species}");
             }
         }
 
