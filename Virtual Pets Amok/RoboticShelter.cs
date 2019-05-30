@@ -78,7 +78,7 @@ namespace Virtual_Pets_Amok
             }
         }
 
-        public void SingleFeed()
+        public override void SingleFeed()
         {
             GetInfo();
 
@@ -86,7 +86,29 @@ namespace Virtual_Pets_Amok
             Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
 
             choicePet.FeedPet();
-            Console.WriteLine($"You just fed {choicePet.Name}!");
+            Console.WriteLine($"You just oiled {choicePet.Name}!");
+        }
+
+        public virtual void SinglePlay()
+        {
+            GetInfo();
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            choicePet.PlayPet();
+            Console.WriteLine($"You just played with {choicePet.Name}!");
+        }
+
+        public virtual void SingleCare()
+        {
+            GetInfo();
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            choicePet.PetCare();
+            Console.WriteLine($"You just brought {choicePet.Name} in for maintenance!");
         }
 
     }

@@ -24,7 +24,7 @@ namespace Virtual_Pets_Amok
         public override void FeedPet()
         {
             base.FeedPet();
-            Console.WriteLine("You just fed your Pet!");
+            
         }
 
         public override void PlayPet()
