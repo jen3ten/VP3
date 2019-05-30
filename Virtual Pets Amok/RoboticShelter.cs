@@ -22,6 +22,17 @@ namespace Virtual_Pets_Amok
             myRoboPets.Add(roboPet);
         }
 
+        public void RemoveRoboPet(RoboPet roboPet)
+        {
+            GetInfo();
+            Console.WriteLine("Please select a pet to remove from the shelter.");
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.WriteLine($"\n{choicePet.Name} was removed from the shelter!");
+
+            myPets.Remove(roboPet);
+        }
+
         public void PetList()
         {
             foreach (Pet element in myRoboPets)
@@ -78,7 +89,7 @@ namespace Virtual_Pets_Amok
             }
         }
 
-        public void SingleFeed()
+        public override void SingleFeed()
         {
             GetInfo();
 
@@ -86,7 +97,29 @@ namespace Virtual_Pets_Amok
             Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
 
             choicePet.FeedPet();
-            Console.WriteLine($"You just fed {choicePet.Name}!");
+            Console.WriteLine($"You just oiled {choicePet.Name}!");
+        }
+
+        public virtual void SinglePlay()
+        {
+            GetInfo();
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            choicePet.PlayPet();
+            Console.WriteLine($"You just played with {choicePet.Name}!");
+        }
+
+        public virtual void SingleCare()
+        {
+            GetInfo();
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            Pet choicePet = myRoboPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            choicePet.PetCare();
+            Console.WriteLine($"You just brought {choicePet.Name} in for maintenance!");
         }
 
     }

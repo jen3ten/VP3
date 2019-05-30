@@ -23,7 +23,25 @@ namespace Virtual_Pets_Amok
         public override void FeedPet()
         {
             base.FeedPet();
-            Console.WriteLine($"You just oiled your Robopet!");
+            
+        }
+
+        public override void PlayPet()
+        {
+            base.PlayPet();
+            Console.WriteLine("You just played with your Pet!");
+        }
+
+        public override void PetCare()
+        {
+            base.PetCare();
+            Console.WriteLine("You just took your Pet in for maintenance!");
+        }
+
+        public override void GetInfo()
+        {
+            base.GetInfo();
+            Console.WriteLine("Your " + Species + " is named " + Name);
         }
     }
 }

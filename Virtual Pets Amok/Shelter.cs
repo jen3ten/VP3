@@ -23,6 +23,17 @@ namespace Virtual_Pets_Amok
             myPets.Add(firstPet);
         }
 
+        public virtual void RemovePetList(Pet firstPet)
+        {
+            GetInfo();
+            Console.WriteLine("Please select a pet to remove from the shelter.");
+            Pet choicePet = myPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.WriteLine($"\n{choicePet.Name} was removed from the shelter!");
+            
+            myPets.Remove(choicePet);
+        }
+
         public void PetList()
         {
             int i = 1;
@@ -83,7 +94,7 @@ namespace Virtual_Pets_Amok
             }
         }
 
-        public void SingleFeed()
+        public virtual void SingleFeed()
         {
             GetInfo();
 
@@ -94,6 +105,27 @@ namespace Virtual_Pets_Amok
             Console.WriteLine($"You just fed {choicePet.Name}!");
         }
 
+        public virtual void SinglePlay()
+        {
+            GetInfo();
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            Pet choicePet = myPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            choicePet.PlayPet();
+            Console.WriteLine($"You just played with {choicePet.Name}!");
+        }
+
+        public virtual void SingleCare()
+        {
+            GetInfo();
+
+            Console.WriteLine("\nPlease select a pet from your shelter:");
+            Pet choicePet = myPets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            choicePet.PetCare();
+            Console.WriteLine($"You just took {choicePet.Name} to the vet!");
+        }
     }
 }
 
