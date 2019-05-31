@@ -67,7 +67,7 @@ namespace Virtual_Pets_Amok
                                     switch (playOption)
                                     {
                                         case 1:
-                                            shelter.PetList();
+                                            shelter.SinglePlay();
                                             break;
                                         case 2:
                                             shelter.PlayAll();
@@ -101,7 +101,7 @@ namespace Virtual_Pets_Amok
                                     switch (careOption)
                                     {
                                         case 1:
-                                            shelter.PetList();
+                                            shelter.SingleCare();
                                             break;
                                         case 2:
                                             shelter.CareAll();
@@ -172,7 +172,7 @@ namespace Virtual_Pets_Amok
                                     switch (playOption)
                                     {
                                         case 1:
-                                            roboShelter.PetList();
+                                            roboShelter.SinglePlay();
                                             break;
                                         case 2:
                                             roboShelter.PlayAll();
@@ -189,7 +189,7 @@ namespace Virtual_Pets_Amok
                                     switch (feedOption)
                                     {
                                         case 1:
-                                            roboShelter.PetList();
+                                            roboShelter.SingleFeed();
                                             break;
                                         case 2:
                                             roboShelter.FeedAll();
@@ -206,7 +206,7 @@ namespace Virtual_Pets_Amok
                                     switch (careOption)
                                     {
                                         case 1:
-                                            roboShelter.PetList();
+                                            roboShelter.SingleCare();
                                             break;
                                         case 2:
                                             roboShelter.CareAll();

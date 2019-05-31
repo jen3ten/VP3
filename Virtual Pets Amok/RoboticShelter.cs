@@ -47,10 +47,10 @@ namespace Virtual_Pets_Amok
 
         public void PlayAll()
         {
+                Console.WriteLine("You just played with all of your Pets!");
             foreach (Pet element in myRoboPets)
             {
                 element.PlayPet();
-                Console.WriteLine("You just played with all of your Pets!");
             }
         }
 
@@ -66,19 +66,19 @@ namespace Virtual_Pets_Amok
 
         public void FeedAll()
         {
+                Console.WriteLine("You just fed all the Pets in your shelter");
             foreach (Pet element in myRoboPets)
             {
                 element.FeedPet();
-                Console.WriteLine("You just fed all the Pets in your shelter");
             }
         }
 
         public void CareAll()
         {
+                Console.WriteLine("You just took all your Pets to the veteranarian");
             foreach (Pet element in myRoboPets)
             {
                 element.PetCare();
-                Console.WriteLine("You just took all your Pets to the veteranarian");
             }
         }
 

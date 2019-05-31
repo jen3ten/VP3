@@ -31,13 +31,13 @@ namespace Virtual_Pets_Amok
         public override void PlayPet()
         {
             base.PlayPet();
-            Console.WriteLine("You just played with your Pet!");
+            
         }
 
         public override void PetCare()
         {
             base.PetCare();
-            Console.WriteLine("You just took your Pet to the Veteranarian!");
+            
         }
 
         public override void GetInfo()
