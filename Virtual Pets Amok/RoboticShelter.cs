@@ -35,11 +35,11 @@ namespace Virtual_Pets_Amok
 
         public void PetList()
         {
-            foreach (Pet element in myRoboPets)
-            {
                 Console.WriteLine("\n\nRobotic Shelter");
                 Console.WriteLine("\nName        |  Species            |");
                 Console.WriteLine("------------|---------------------|");
+            foreach (Pet element in myRoboPets)
+            {
                 Console.WriteLine($"{element.Name}        |      {element.Species}\n");
             }
         }
