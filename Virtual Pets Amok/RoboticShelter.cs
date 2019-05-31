@@ -40,8 +40,9 @@ namespace Virtual_Pets_Amok
                 Console.WriteLine("------------|---------------------|");
             foreach (Pet element in myRoboPets)
             {
-                Console.WriteLine($"{element.Name}        |      {element.Species}\n");
+                Console.WriteLine($"{element.Name}        |      {element.Species}");
             }
+            Console.WriteLine("\n");
         }
 
         public void PlayAll()
