@@ -11,10 +11,10 @@ namespace Virtual_Pets_Amok
 
         }
         Pet firstPet;
-        OrganicPet organicPet;
+        //OrganicPet organicPet;
         Shelter shelter;
-        RoboPet roboPet;
-        RoboticShelter roboShelter;
+        //RoboPet roboPet;
+        //RoboticShelter roboShelter;
 
         public void FirstMenu()
         {
@@ -28,7 +28,7 @@ namespace Virtual_Pets_Amok
                 toPlay = false;
             }
             shelter = new Shelter("Shelter");
-            roboShelter = new RoboticShelter("RoboShelter");
+            //roboShelter = new RoboticShelter("RoboShelter");
         
             while (toPlay)
             {
@@ -36,19 +36,19 @@ namespace Virtual_Pets_Amok
                 Console.WriteLine("Please choose which Shelter you would like to visit: \n1. Organic \n2. Robotic");
                 int shelterType = Convert.ToInt32(Console.ReadLine());
                 shelter.TimeToll();
-                roboShelter.TimeTollToo();
+                //roboShelter.TimeTollToo();
 
                 if (shelterType.Equals(1))
                 {
-                    organicPet = new OrganicPet("", "");
+                    firstPet = new Pet("", "", 1);
                     Menu startMenu = new Menu();
                     int menuResponse = menu.MainMenu();
 
                     switch (menuResponse)
                     {
                         case 1:
-                            organicPet.CreatePet();
-                            shelter.AddPetList(organicPet);
+                            firstPet.CreatePet(1);
+                            shelter.AddPetList(firstPet);
                             break;
                         case 2:
                             Console.WriteLine("Choose which activity you would like to do:");
@@ -126,10 +126,10 @@ namespace Virtual_Pets_Amok
                             break;
                         case 5:
                             shelter.PetList();
-                            roboShelter.PetList();
+                            //roboShelter.PetList();
                             break;
                         case 6:
-                            shelter.RemovePetList(organicPet);
+                            shelter.RemovePetList(firstPet);
                             break;
                         case 7:
                             if (menuResponse == 7)
@@ -145,15 +145,15 @@ namespace Virtual_Pets_Amok
 
                 else if (shelterType.Equals(2))
                 {
-                    roboPet = new RoboPet("", "");
+                    firstPet = new Pet("", "", 2);
                     Menu startMenu = new Menu();
                     int menuResponse = menu.MainMenu();
 
                     switch (menuResponse)
                     {
                         case 1:
-                            roboPet.CreatePet();
-                            roboShelter.AddRoboPetList(roboPet);
+                            firstPet.CreatePet(2);
+                            shelter.AddPetList(firstPet);
                             break;
                         case 2:
                             Console.WriteLine("Choose which activity you would like to do:");
@@ -172,10 +172,10 @@ namespace Virtual_Pets_Amok
                                     switch (playOption)
                                     {
                                         case 1:
-                                            roboShelter.SinglePlay();
+                                            shelter.SinglePlay();
                                             break;
                                         case 2:
-                                            roboShelter.PlayAll();
+                                            shelter.PlayAll();
                                             break;
                                         default:
                                             Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to play all the pets in your shelter.");
@@ -189,10 +189,10 @@ namespace Virtual_Pets_Amok
                                     switch (feedOption)
                                     {
                                         case 1:
-                                            roboShelter.SingleFeed();
+                                            shelter.SingleFeed();
                                             break;
                                         case 2:
-                                            roboShelter.FeedAll();
+                                            shelter.FeedAll();
                                             break;
                                         default:
                                             Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to feed all the pets in your shelter.");
@@ -206,10 +206,10 @@ namespace Virtual_Pets_Amok
                                     switch (careOption)
                                     {
                                         case 1:
-                                            roboShelter.SingleCare();
+                                            shelter.SingleCare();
                                             break;
                                         case 2:
-                                            roboShelter.CareAll();
+                                            shelter.CareAll();
                                             break;
                                         default:
                                             Console.WriteLine("Please type: \n\"1\" to select a pet or \n\"2\" to take all your pets to the veteranarian.");
@@ -218,17 +218,17 @@ namespace Virtual_Pets_Amok
                                     break;
                             }       break;
                             case 3:
-                                    roboShelter.GetInfo();
+                                    shelter.GetInfo();
                                     break;
                             case 4:
-                                    roboShelter.GetStatus();
+                                    shelter.GetStatus();
                                     break;
                             case 5:
                                     shelter.PetList();
-                                    roboShelter.PetList();
+                                    shelter.PetList();
                                     break;
                             case 6:
-                                    roboShelter.RemoveRoboPet(roboPet);
+                                    shelter.RemovePetList(firstPet);
                                     break;
                             case 7:
                                 if (menuResponse == 7)

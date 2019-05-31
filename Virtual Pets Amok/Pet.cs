@@ -12,26 +12,40 @@ namespace Virtual_Pets_Amok
         public int Boredom { get; set; }
         public int Health { get; set; }
 
-        public Pet(string name, string species)
+        // Added to handle type of Pet instead of adding derived classes
+        public int TypeOfPet { get; set; }
+
+        public Pet(string name, string species, int type)
         {
             Name = name;
             Species = species;
+            TypeOfPet = type;
             Energy = 45;
             Boredom = 30;
             Health = 85;
         }
 
         Shelter shelter = new Shelter("Shelter");
-        RoboticShelter roboShelter = new RoboticShelter("RoboShelter");
+        //RoboticShelter roboShelter = new RoboticShelter("RoboShelter");
 
         protected string petSpecies;
         protected string petName;
 
-        public virtual void CreatePet()
+        public virtual void CreatePet(int type)
         {
+            if(type == 1)
+            {
+                Console.WriteLine("Please choose which Pet you would like to add to your shelter: Goldfish, Moose, Ferret, or Penguin");
+            }
+            else
+            {
+                Console.WriteLine("Please choose which Robotic Pet you would like to add to your shelter: Dog, Dinosaur, Racoon, or Hedgehog");
+            }
             petSpecies = Console.ReadLine();
             Console.WriteLine("Please give a name to your " + petSpecies);
             petName = Console.ReadLine();
+            this.Name = petName;
+            this.Species = petSpecies;
         }
 
         public virtual void FeedPet()
