@@ -46,10 +46,10 @@ namespace Virtual_Pets_Amok
             Boredom -= 10;
             Energy += 7;
             int injuryChance = new Random().Next(1, 101);
-            if (injuryChance <= 10)
+            if (injuryChance <= 50)
             {
                 Health -= 25;
-                Console.WriteLine("Oh No! You're pet got hurt while playing. You better take them to get cared for!");
+                Console.WriteLine($"Oh No! {Name} got hurt while playing. You better take them to get cared for!");
             }
         }
 
